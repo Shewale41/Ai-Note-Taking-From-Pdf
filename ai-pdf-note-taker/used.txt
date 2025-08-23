@@ -1,0 +1,6 @@
+styling - tailwindCss
+ui components - shadcdn
+backend - convex
+layout.js - server side pe rahega 
+provider.js - client side pe rahega 
+schema.js isko badme .ts ya firs .js kuch karna padega

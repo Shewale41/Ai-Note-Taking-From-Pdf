@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "checkJs": false,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"]   
     }
-  }
+  },
+  "exclude": ["node_modules"]
 }
