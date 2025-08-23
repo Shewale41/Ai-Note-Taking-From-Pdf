@@ -4,3 +4,12 @@ backend - convex
 layout.js - server side pe rahega 
 provider.js - client side pe rahega 
 schema.js isko badme .ts ya firs .js kuch karna padega
+.env mein se badme woh fallback url nikaldena shayad se
+badme signin or signup page ko ekdum center dal dena 
+mutation matlab add or insert karna data
+query se bas fetch karna data
+previous version before this 
+ "react": "19.1.0",
+    "react-dom": "19.1.0",
+
+     
