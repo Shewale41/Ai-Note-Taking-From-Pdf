@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.31.4",
+    "@langchain/community": "^0.3.53",
+    "@langchain/core": "^0.3.72",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-progress": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
@@ -17,6 +19,7 @@
     "convex": "^1.26.1",
     "lucide-react": "^0.541.0",
     "next": "15.5.0",
+    "pdf-parse": "^1.1.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "^3.3.1",

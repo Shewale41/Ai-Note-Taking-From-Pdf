@@ -13,4 +13,5 @@ previous version before this
     "react-dom": "19.1.0",
 logo - logoipsum se logo churaya hai
 unique id - npm uuid4 from npm's official site 
+language training model - langchain
      
