@@ -3,9 +3,15 @@ import { WebPDFLoader } from "@langchain/community/document_loaders/web/pdf";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 
 
-const pdfUrl="https://neighborly-stoat-164.convex.cloud/api/storage/a8f5951f-ee3e-499c-927b-900f5947a404";
+// const pdfUrl="https://neighborly-stoat-164.convex.cloud/api/storage/a8f5951f-ee3e-499c-927b-900f5947a404";
 export async function GET(req){
     
+    //getting the PDF file Url 
+    const reqUrl=req.url;
+    const {searchParams}=new URL(reqUrl);
+    const pdfUrl=searchParams.get('pdfUrl');
+    console.log(pdfUrl);
+
     //step 1.Load the PDF file
     const response=await fetch(pdfUrl);
     const data=await response.blob();

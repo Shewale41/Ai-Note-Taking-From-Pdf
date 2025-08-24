@@ -14,4 +14,6 @@ previous version before this
 logo - logoipsum se logo churaya hai
 unique id - npm uuid4 from npm's official site 
 language training model - langchain
+http client library - axios (fetch and requests ke liye) similar to fetch bas better hai
+gemini api - ai api key for our langchain langauge model data processing
      
