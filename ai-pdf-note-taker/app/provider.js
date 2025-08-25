@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import { ConvexProvider, ConvexReactClient } from "convex/react";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 
 function Provider({children}) {
@@ -8,7 +9,12 @@ function Provider({children}) {
 
   return (
     //so here my app is wrapped inside convex provider so that my app can use convex data
-    <div><ConvexProvider client={convex}>{children}</ConvexProvider></div>
+    <div><ConvexProvider client={convex}>
+      <PayPalScriptProvider options={{ clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID }}>
+      {children}
+      </PayPalScriptProvider>
+      </ConvexProvider>
+      </div>
   )
 }
 

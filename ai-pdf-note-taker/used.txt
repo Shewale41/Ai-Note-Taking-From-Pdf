@@ -21,3 +21,6 @@ lucid react - react icons (mast icons ke liye)
 api key - AIzaSyCBV0Iu1PjeSzCr8tsdK5ivhYBbRjTboxw 
 awesome icons - flat icons 
 skeleton effect - we will be using skeleton effect 
+Link - kisi bhi button se agar dusri jagah ya dusri 
+     -route par jana hai toh Link lagalo instead of onClick Link easy hai
+hyper.ui - readyMade Ui components      
