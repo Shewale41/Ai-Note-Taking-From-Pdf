@@ -54,3 +54,21 @@ export const GetFileRecord=query({
         return result[0];
     }
 })
+
+//function to get userFiles and to display on the Dashboard (yaad rakhna )
+export const GetUserFiles=query({
+    args:{
+        userEmail:v.optional(v.string())
+    },
+    handler:async(ctx,args)=>{
+
+        if(!args?.userEmail){
+            return;
+        }
+        const result = await ctx.db.query('pdfFiles')
+        .filter((q)=>q.eq(q.field('createdBy'),args?.userEmail))
+        .collect();
+
+        return result;
+    }
+})

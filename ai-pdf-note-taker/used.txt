@@ -18,4 +18,6 @@ http client library - axios (fetch and requests ke liye) similar to fetch bas be
 gemini api - ai api key for our langchain langauge model data processing
 tiptap.dev - text editor 
 lucid react - react icons (mast icons ke liye)    
- 
+api key - AIzaSyCBV0Iu1PjeSzCr8tsdK5ivhYBbRjTboxw 
+awesome icons - flat icons 
+skeleton effect - we will be using skeleton effect 
