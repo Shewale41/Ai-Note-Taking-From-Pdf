@@ -1,11 +1,23 @@
+"use client"
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { Layout, Shield } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import UploadPdfDialog from './UploadPdfDialog'
+import { useUser } from '@clerk/nextjs'
+import { useQuery } from 'convex/react'
+import { api } from '@/convex/_generated/api'
 
 function SideBar() {
+
+    const { user } = useUser();
+
+    const fileList = useQuery(api.fileStorage.GetUserFiles, {
+        userEmail: user?.primaryEmailAddress?.emailAddress,
+    });
+
+
   return (
     <div className='shadow-md p-7 h-screen '>
         {/* //here is our logo we will change it later if i dont forgot */}
@@ -13,7 +25,7 @@ function SideBar() {
 
         <div className='mt-10'>
         {/* //passing this button as children to the dialog component */}
-            <UploadPdfDialog> 
+            <UploadPdfDialog isMaxFile={fileList?.length>=5?true:false} > 
             <Button className="w-full">+  Upload PDF</Button>
             </UploadPdfDialog>
             
@@ -29,8 +41,9 @@ function SideBar() {
             </div>
         </div>
         <div className='absolute bottom-24 w-[80%] '>
-            <Progress value={33}/>
-            <p className='text-sm mt-1'>2 out of 5 PDFs uploaded</p>
+        {/* //currently we can do 5 only so divide by and multiply by 100 to get percentage */}
+            <Progress value={(fileList?.length/5)*100}/> 
+            <p className='text-sm mt-1'>{fileList?.length} out of 5 PDFs uploaded</p>
             <p className='text-sm text-gray-400 mt-2 '>Upgrade to upload more PDFs</p>
         </div>
     </div>
