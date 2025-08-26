@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "ai-pdf-note-taker/next.config.js",
+        "use": "@vercel/next"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "ai-pdf-note-taker/$1" }
+    ]
+  }
+  
