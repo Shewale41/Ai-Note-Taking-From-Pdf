@@ -13,6 +13,7 @@ import Link from 'next/link'
 
 function SideBar() {
 
+  //getting user info 
     const { user } = useUser();
     const path=usePathname();
     const GetUserInfo = useQuery(api.user.GetUserInfo, {
