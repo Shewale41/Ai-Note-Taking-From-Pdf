@@ -40,7 +40,7 @@ export const userUpgradePlan=mutation({
         userEmail:v.string(),
     },
     handler:async(ctx,args)=>{
-        const result=await ctx.ad.query('users')
+        const result=await ctx.db.query('users')
         .filter((q)=>q.eq(q.field('email'),args.userEmail))
         .collect();
 

@@ -19,9 +19,9 @@ export async function GET(req){
     const docs=await loader.load();
 
     //taking only the page content form json 
-    let pdfTextContent='';
+    let pdfTextContent="";
     docs.forEach(doc=>{
-        pdfTextContent=pdfTextContent+doc.pageContent;
+        pdfTextContent += doc.pageContent;
     })
 
     //step 2.Split the text into small Chunks

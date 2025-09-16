@@ -30,16 +30,16 @@ function EditorExtension({editor}) {
             fileId:fileId
         })
         //for debugging only 
-        console.log("fileId in params:", fileId);
+        console.log("UnFormattedAns", result);
         
         const UnFormattedAns=JSON.parse(result);
         let AllUnformattedAns='';
-        UnFormattedAns&&UnFormattedAns.forEach(item=>{
+        UnFormattedAns&&UnFormattedAns.forEach((item)=>{
           AllUnformattedAns=AllUnformattedAns+item.pageContent
         });
 
-        const PROMPT="For question"+selectedText+"and with given content as answer ,"+
-        "please give appropraite answer in HTML format. The answer content is :"+AllUnformattedAns;
+        console.log(AllUnformattedAns);
+        const PROMPT = `For question: ${selectedText} and with the given content as answer, please give appropriate answer in HTML format. The answer content is: ${AllUnformattedAns}`;
         
         const AiModelResult= await chatSession.sendMessage(PROMPT);
         console.log(AiModelResult.response.text());
